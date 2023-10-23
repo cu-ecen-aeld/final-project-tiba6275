@@ -1,0 +1,25 @@
+#! /bin/sh
+
+case "$1" in
+    start)
+        echo "Load scull"
+        scull_load
+        echo "Load module"
+        module_load faulty
+        echo "Load hello"
+        modprobe hello
+        ;;
+    stop)
+        echo "Unload scull"
+        scull_unload
+        echo "Unload module"
+        module_unload faulty
+        echo "Unload hello"
+        rmmod hello
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+esac
+
+exit 0
