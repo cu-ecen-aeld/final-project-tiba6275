@@ -2,6 +2,8 @@
 
 case "$1" in
     start)
+        echo "Load aesdchar"
+        aesdchar_load
         echo "Load scull"
         scull_load
         echo "Load module"
@@ -10,6 +12,8 @@ case "$1" in
         modprobe hello
         ;;
     stop)
+        echo "Unload aesdchar"
+        aesdchar_unload
         echo "Unload scull"
         scull_unload
         echo "Unload module"
