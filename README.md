@@ -1,5 +1,5 @@
 # ecen5713-final-project
-Personal repo for ECEN5713 final project.
+ECEN5713 final project buildroot repo
 
 Project overview found here:  
 https://github.com/cu-ecen-aeld/final-project-tiba6275/wiki/Project-Overview  
