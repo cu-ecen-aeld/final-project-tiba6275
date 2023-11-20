@@ -2,7 +2,7 @@
 #!/bin/sh
 
 KERNEL="buildroot/output/images/Image"
-DTB="buildroot/output/images/bcm2710-rpi-3-b.dtb" 
+DTB="buildroot/output/images/bcm2710-rpi-zero-2-wdtb" 
 ROOTFS="buildroot/output/images/rootfs.ext2"
 
 if [ ! -e $KERNEL ]
