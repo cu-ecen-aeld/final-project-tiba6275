@@ -1,0 +1,5 @@
+
+config BR2_PACKAGE_CAMERA
+	bool "camera"
+	help
+	  Camera app for final project
