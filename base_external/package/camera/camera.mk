@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-CAMERA_VERSION = 'f0c0c3b8cac10e21c73823d17d1bc0a7468b9293'
+CAMERA_VERSION = '4c5eb1bcecec09f29db74e56a56d08962a45cb0b'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -29,6 +29,8 @@ define CAMERA_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/CMakeLists.txt $(TARGET_DIR)/usr/etc/
 	$(INSTALL) -d 0755 $(TARGET_DIR)/etc/init.d/
 	$(INSTALL) -m 0755 $(@D)/load_modules.sh $(TARGET_DIR)/etc/init.d/S99load_modules
+	$(INSTALL) -m 0755 $(@D)/start_wifi.sh $(TARGET_DIR)/etc/init.d/S99start_wifi
+	$(INSTALL) -m 0755 $(@D)/brcm/* $(TARGET_DIR)/lib/firmware/brcm
 endef
 
 $(eval $(kernel-module))
